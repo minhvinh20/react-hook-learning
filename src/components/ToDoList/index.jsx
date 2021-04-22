@@ -20,7 +20,9 @@ function ToDoList(props) {
     return (
         <ul>
             {todos.map(todo => (
-                <li key={todo.id} onClick={() => handleClick(todo)}>{todo.title}</li>
+                <li key={todo.id} onClick={() => handleClick(todo)}>
+                    {todo.title}
+                </li>
             ))}
         </ul>
     );
