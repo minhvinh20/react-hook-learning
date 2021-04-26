@@ -8,7 +8,9 @@ import PostList from './components/PostList';
 import Pagination from './components/Pagination';
 import PostFilterForm from './components/PostFilterForm'
 import Clock from './components/Clock'
+import BetterClock from './components/betterClock'
 import QueryString from 'query-string'
+import MagicBox from './components/MagicBox';
 
 function App() {
   const [todolist, setToDoList] = useState( () => [
@@ -89,13 +91,15 @@ function App() {
   return (
     <div className="App">
       <h1>Hello</h1>
-      {showClock && <Clock></Clock>}
-      <button type='button' onClick={() => setShowClock(!showClock)}>Show/Hide Clock</button>
+      <MagicBox></MagicBox>
+      {/* {showClock && <Clock></Clock>}
+      {showClock && <BetterClock></BetterClock>}
+      <button type='button' onClick={() => setShowClock(!showClock)}>Show/Hide Clock</button> */}
       {/* <ToDoList todos={todolist} onToDoClick={handleTodoClick}></ToDoList>
       <ToDoForm onSubmit={handletoDoFormSubmit}></ToDoForm> */}
-      <PostFilterForm onSubmit={handleFilterChange}></PostFilterForm>
+      {/* <PostFilterForm onSubmit={handleFilterChange}></PostFilterForm>
       <PostList posts={postList}></PostList>
-      <Pagination pagination={pagination} onPageChange={handlePageChange}></Pagination>
+      <Pagination pagination={pagination} onPageChange={handlePageChange}></Pagination> */}
     </div>
   );
 }

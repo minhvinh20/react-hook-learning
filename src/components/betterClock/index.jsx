@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import useClock from '../../hooks/useClock';
 
 
-function Clock() {
+function BetterClock() {
     const {timeString} = useClock()
     return (
-        <h1>Time is: {timeString}</h1>
+        <h1>Now is: {timeString}</h1>
     )
 }
 
-export default Clock;
+export default BetterClock;
